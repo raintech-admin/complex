@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t raintech/multi-react ./client
-  - docker build -t raintech/multi-nginx ./ngix
+  - docker build -t raintech/multi-nginx ./nginx
   - docker build -t raintech/multi-server ./server
   - docker build -t raintech/multi-worker ./worker
 
