@@ -36,6 +36,7 @@ deploy:
   env: 'Rt-multi-docker-env'
   bucket_name: 'elasticbeanstalk-ap-southeast-1-371993076347'
   bucket_path: 'rt-multi-docker'
+  version_label: "Sample" # Set the version label explicitly
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
