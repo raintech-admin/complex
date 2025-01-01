@@ -23,9 +23,12 @@ after_success:
   - docker push raintech/multi-server
   - docker push raintech/multi-worker
 
-rvm:
-  - 3.1.2
-  
+dist: jammy
+group: edge
+language: node_js
+node_js:
+ - "16"
+
 deploy:
   provider: elasticbeanstalk
   region: 'ap-southeast-1'
