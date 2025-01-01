@@ -23,6 +23,9 @@ after_success:
   - docker push raintech/multi-server
   - docker push raintech/multi-worker
 
+rvm:
+  - 3.1.2
+  
 deploy:
   provider: elasticbeanstalk
   region: 'ap-southeast-1'
