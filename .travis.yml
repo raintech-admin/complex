@@ -22,3 +22,15 @@ after_success:
   - docker push raintech/multi-nginx
   - docker push raintech/multi-server
   - docker push raintech/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-1'
+  app: 'rt-multi-docker'
+  env: 'Rt-multi-docker-env'
+  bucket_name: 'elasticbeanstalk-ap-southeast-1-371993076347'
+  bucket_path: 'rt-multi-docker'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
